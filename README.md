@@ -438,10 +438,10 @@ Per virtual-host `servers_tokens` directive can be configured by passing appropr
 
 ### Troubleshooting
 
-In case you can't access your VIRTUAL_HOST, set `DEBUG=true` in the client container's environment and have a look at the generated nginx configuration file `/etc/nginx/conf.d/default`:
+In case you can't access your VIRTUAL_HOST, set `DEBUG=true` in the client container's environment and have a look at the generated nginx configuration file `/etc/nginx/conf.d/default.conf`:
 
 ```
-$ docker exec <nginx-proxy-instance> cat /etc/nginx/conf.d/default
+$ docker exec <nginx-proxy-instance> cat /etc/nginx/conf.d/default.conf
 ```
 Especially at `upstream` definition blocks which should look like:
 
